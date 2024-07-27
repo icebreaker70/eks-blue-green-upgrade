@@ -1,13 +1,13 @@
 variable "aws_region" {
   description = "AWS Region"
   type        = string
-  default     = "us-west-2"
+  default     = "ap-northeast-2"
 }
 
 variable "environment_name" {
   description = "The name of Environment Infrastructure stack, feel free to rename it. Used for cluster and VPC names."
   type        = string
-  default     = "eks-blueprint"
+  default     = "t101-eks-blueprint"
 }
 
 variable "ingress_type" {
@@ -19,13 +19,13 @@ variable "ingress_type" {
 variable "hosted_zone_name" {
   type        = string
   description = "Route53 domain for the cluster."
-  default     = ""
+  default     = "ksj7279.click"
 }
 
 variable "eks_admin_role_name" {
   type        = string
   description = "Additional IAM role to be admin in the cluster"
-  default     = ""
+  default     = "AWSReservedSSO_AWSAdministratorAccess_0a9b1bfd0c855752"
 }
 
 variable "aws_secret_manager_git_private_ssh_key_name" {
@@ -43,7 +43,7 @@ variable "argocd_secret_manager_name_suffix" {
 variable "gitops_addons_org" {
   type        = string
   description = "Git repository org/user contains for addons"
-  default     = "git@github.com:aws-samples"
+  default     = "git@github.com:icebreaker70"
 }
 variable "gitops_addons_repo" {
   type        = string
@@ -69,7 +69,7 @@ variable "gitops_addons_revision" {
 variable "gitops_workloads_org" {
   type        = string
   description = "Git repository org/user contains for workloads"
-  default     = "git@github.com:aws-samples"
+  default     = "git@github.com:icebreaker70"
 }
 
 variable "gitops_workloads_repo" {
@@ -99,7 +99,7 @@ variable "service_name" {
 variable "cluster_version" {
   description = "The Version of Kubernetes to deploy"
   type        = string
-  default     = "1.25"
+  default     = "1.27"
 }
 
 variable "argocd_route53_weight" {
